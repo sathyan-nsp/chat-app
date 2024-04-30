@@ -36,10 +36,7 @@ app.listen(port, (req, res) => {
 });
 
 mongoose
-  .connect(process.env.ATLAS_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
+  .connect(process.env.ATLAS_URI)
   .then(() => console.log("MongoDB Connection established"))
   .catch((error) => console.log("MongoDB Connection Failed: ", error.message));
 
